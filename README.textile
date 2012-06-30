@@ -26,7 +26,7 @@ Note: if you don't set a password, just leave the password field blank in the An
 
 5. Impress people with magic.
 
-h3. Debugging (taken directly from dreur's README)
+h2. Debugging (taken directly from dreur's README)
 
 1. Is Cmus listening on the right port?
 
@@ -44,10 +44,10 @@ or
 
 @sudo tcpdump -i wlan0 tcp -X -v@
 
-h4. Development
+h2. Development
 
 This being the first app I've worked on after learning about ActionBarSherlock, I had to try it out. It's not difficult to get going, but all of the basic information can be found at "ActionBarSherlock's home page":http://actionbarsherlock.com/ If you'd like to avoid using it in favor of using the traditional "Menu popup" style, it should be as easy as changing the com.actionbarsherlock.* imports to correspondong Android built-ins and removing the Sherlock theme from the manifest.
 
-h5. Questions/Comments
+h2. Questions/Comments
 
 If you have any further problems (specifically related to the app), please feel free to email me. I am no expert Android dev and I haven't put this through extensive testing, so I am sure there are still some bugs to be found. 
