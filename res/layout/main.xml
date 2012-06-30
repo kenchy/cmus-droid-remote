@@ -1,42 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical" android:layout_width="fill_parent"
-	android:layout_height="fill_parent">
-	<TableLayout android:layout_width="fill_parent"
-		android:layout_height="fill_parent">
-		<TableRow>
-			<TextView android:text="@string/hostAndPortLabel"
-				android:layout_width="wrap_content" android:layout_height="wrap_content" />
-		</TableRow>
-		<TableRow>
-			<AutoCompleteTextView android:id="@+id/hostText" android:completionThreshold="1" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="wrap_content" android:hint="Host or IP"></AutoCompleteTextView>
-			<EditText android:id="@+id/portText" android:layout_height="wrap_content"
-				android:inputType="number" android:layout_width="wrap_content"
-				android:layout_weight="1" android:hint="Port">
-				<requestFocus></requestFocus>
-			</EditText>
-		</TableRow>
-		<TableRow>
-			<TextView android:text="@string/passwordLabel"
-				android:layout_width="wrap_content" android:layout_height="wrap_content" />
-		</TableRow>
-		<TableRow>
-			<EditText android:id="@+id/passwordText" android:inputType="textPassword"
-				android:layout_height="wrap_content" android:layout_width="wrap_content"
-				android:layout_weight="1" android:hint="Password"/>
-		</TableRow>
-		<TableRow>
-			<TextView android:layout_width="wrap_content"
-				android:layout_height="wrap_content" android:text="@string/commandLabel" />
-		</TableRow>
-		<TableRow>
-			<Spinner android:layout_weight="1"
-				android:id="@+id/commandSpinner" android:prompt="@string/commandLabel" android:layout_height="fill_parent" android:layout_width="wrap_content" android:minHeight="60dp" android:padding="10dp"/>
-		</TableRow>
-		<TableRow>
-			<Button android:layout_height="wrap_content" android:text="@string/sendCommandButtonLabel"
-				android:id="@+id/sendCommandButton" android:layout_width="fill_parent"
-				android:layout_weight="1" />
-		</TableRow>
-	</TableLayout>
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="15dip" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <TableRow>
+            <Button
+                android:id="@+id/pauseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="c" />
+
+            <Button
+                android:id="@+id/prevButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="z" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="b" />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/stopButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="v" />
+
+            <Button
+                android:id="@+id/shuffleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="s" />
+
+            <Button
+                android:id="@+id/repeatButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="r" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/artistTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Artist:" />
+
+    <TextView
+        android:id="@+id/trackTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Track:" />
+
+    <TextView
+        android:id="@+id/albumTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Album:" />
+
+    <ProgressBar
+        android:id="@+id/trackProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:max="1000" />
+
+    <TextView
+        android:id="@+id/trackProgTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="0:00/0:00" />
+
 </LinearLayout>

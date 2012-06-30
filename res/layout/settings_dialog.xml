@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="20dip"
+    android:paddingBottom="20dip"
+    android:paddingRight="20dip" >
+        
+	<TableRow>
+	    <TextView 
+	        android:text="@string/hostAndPortLabel"
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content" />
+	</TableRow>
+	
+	<TableRow>
+	    <EditText
+	        android:id="@+id/hostText" 
+	        android:layout_height="wrap_content" 
+	        android:layout_weight="1" 
+	        android:layout_width="wrap_content" 
+	        android:hint="Host or IP"
+	        android:inputType="number|text">
+	        <requestFocus/>
+	    </EditText>
+	    
+	    <EditText 
+	        android:id="@+id/portText" 
+	        android:ems="4"
+	        android:layout_height="wrap_content"
+	        android:inputType="number" 
+	        android:layout_width="wrap_content"
+	        android:layout_weight="1" 
+	        android:hint="Port">
+	    </EditText>
+	</TableRow>
+	
+	<TableRow>
+	    <TextView 
+	        android:text="@string/passwordLabel"
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content" />
+	</TableRow>
+	
+	<TableRow>          
+	    <EditText 
+	        android:id="@+id/passwordText" 
+	        android:inputType="textPassword"
+	        android:layout_height="wrap_content" 
+	        android:layout_width="wrap_content"
+	        android:layout_weight="1" 
+	        android:hint="Password"/>
+	</TableRow>
+	
+	<TableRow
+	    android:layout_marginTop="10dip">
+	    <Button
+	        android:id="@+id/okButton"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:text="OK"
+	        android:layout_weight="1" />
+	    <Button
+	        android:id="@+id/cancelButton"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:text="Cancel"
+	        android:layout_weight="1" />
+	</TableRow>
+</TableLayout>
