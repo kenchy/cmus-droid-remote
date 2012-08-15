@@ -20,7 +20,7 @@
 	        android:layout_weight="1" 
 	        android:layout_width="wrap_content" 
 	        android:hint="Host or IP"
-	        android:inputType="number|text">
+	        android:inputType="text">
 	        <requestFocus/>
 	    </EditText>
 	    
